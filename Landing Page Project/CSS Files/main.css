@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+  --font-titlu: 'Montserrat', sans-serif;
+  --font-secundar: "Oswald", sans-serif;
+  --font-tertiar: "Playfair Display", serif;
+}
+
+h1 , h2 , h3 {
+    font-size: 40px;
+    line-height: 1;
+}
+
+@media (max-width: 1100px) {
+
+    h1, h2 , h3 {
+        font-size: 32px;
+    }
+
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body-wrapper {
+    overflow: hidden;
+}
+
+.testimonials-panel {
+    background-color: #141414;
+    margin-bottom: 0;
+    padding: 90px 20px;
+}
+
+
+.testimonials-panel .my-nav-container .slick-arrow {
+    position: relative;
+    left: unset ;
+    right: unset;
+    top: unset;
+    transform: unset;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.testimonials-panel .my-nav-container .slick-arrow:before {
+    display: none;
+}
+
+.testimonials-panel .my-nav-container .slick-arrow:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    mask-image: url("../ImagesFonts/arrowleft.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: #fff;
+    z-index: 10;
+    transition: all 0.5s ease;
+}   
+
+.testimonials-panel .my-nav-container .slick-arrow:hover, .testimonials-panel .my-nav-container .slick-arrow:focus-visible {
+    background: #fff;
+}
+
+.testimonials-panel .my-nav-container .slick-arrow:hover:after , .testimonials-panel .my-nav-container .slick-arrow:focus-visible:after {
+    background-color: #000;
+}
+
+.testimonials-panel .my-nav-container .slick-prev {
+    order: 1;
+}
+
+.testimonials-panel .my-nav-container .slick-next {
+    order: 3;
+    transform: scaleX(-1);
+}
+
+.testimonials-panel .my-nav-container .slick-dots {
+    position: relative;
+    bottom: unset;
+    width: unset;
+    order: 2;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.testimonials-panel .my-nav-container .slick-dots li {
+    width: unset;
+    height: unset;
+    display: flex;
+}
+
+.testimonials-panel .my-nav-container .slick-dots li button {
+    border: 1px solid #fff;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.5s ease;
+}
+
+.testimonials-panel .my-nav-container .slick-dots li button:hover , .testimonials-panel .my-nav-container .slick-dots li button:focus-visible {
+    background: #fff;
+}
+
+.testimonials-panel .my-nav-container .slick-dots li.slick-active button {
+    background: #fff;
+}
+
+.testimonials-panel .my-nav-container .slick-dots li button:before {
+    display: none;
+}
+
+.testimonials-panel > header .cmElementTitle h2 {
+    position: relative;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: var(--font-tertiar);
+    font-weight: 300;
+}
+
+.testimonials-panel .wrapperContainer .cmElement.cmContent {
+    position: relative;
+}
+
+.testimonials-panel .wrapperContainer .cmElement.cmContent:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 7px;
+    mask-image: url("../ImagesFonts/quotationmark.png");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: #ff5252;
+}
+
+#root .wrapper-pop-up .pop-up-element p:first-child:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -30px;
+    mask-image: url("../ImagesFonts/quotationmark.png");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: #ff5252;
+}
+
+.testimonials-panel .wrapperContainer {
+    margin-bottom: 0;
+}
+
+.testimonials-panel .my-nav-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.testimonials-panel .wrapperContainer .testimonial-box {
+    position: relative;
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.testimonials-panel .wrapperContainer .testimonial-box .open-pop-up {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    color: transparent;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    bottom: 28px;
+    left: 35px;
+    transition: all 0.5s ease;
+}
+
+.testimonials-panel .wrapperContainer .testimonial-box .open-pop-up:before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%) rotate(45deg);
+    mask-image: url("../ImagesFonts/signX.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: #fff;
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+.testimonials-panel .wrapperContainer .testimonial-box .open-pop-up:hover , .testimonials-panel .wrapperContainer .testimonial-box .open-pop-up:focus-visible {
+    background: #fff;
+}
+
+.testimonials-panel .wrapperContainer .testimonial-box .open-pop-up:hover:before , .testimonials-panel .wrapperContainer .testimonial-box .open-pop-up:focus-visible:before {
+    background-color: #000;
+}
+
+.testimonials-panel .wrapperContainer .testimonial-box .content-box {
+    position: relative;
+    color: #ccc;
+    margin-bottom: 1rem;
+    font-style: italic;
+    font-family: var(--font-titlu);
+    line-height: 1.3;
+}
+
+
+
+.testimonials-panel .wrapperContainer .testimonial-box .name-box h2 {
+    position: relative;
+    text-align: right;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+}
+
+#root .wrapper-pop-up .pop-up-element {
+    position: fixed;
+    background: #1e1e1e;
+    z-index: 100;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    left: 50%;
+    width: calc(100% - 40px);
+    padding: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+body.active-pop-up {
+    overflow-Y: hidden;
+}
+
+#root .wrapper-pop-up .pop-up-element.pop-up-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#root .wrapper-pop-up .pop-up-element .close-element {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.5s ease;
+}
+
+#root .wrapper-pop-up .pop-up-element .close-element:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    mask-image: url("../ImagesFonts/signX.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: #fff;
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+#root .wrapper-pop-up .pop-up-element .close-element:hover , #root .wrapper-pop-up .pop-up-element .close-element:focus-visible {
+    background: #fff;
+}
+
+#root .wrapper-pop-up .pop-up-element .close-element:hover:before {
+    transform: translate(-50% , -50%) rotate(180deg);
+    background-color: #000;
+}
+
+#root .wrapper-pop-up .pop-up-element .name-box h2 {
+     position: relative;
+    text-align: right;
+    color: #fff;
+}
+
+#root .wrapper-pop-up .pop-up-element p {
+    position: relative;
+    color: #ccc;
+    margin-bottom: 1rem;
+    font-style: italic;
+    font-family: var(--font-titlu);
+    line-height: 1.3;
+}
+
+.text-content-container {
+    background-color: #141414;
+    padding: 60px 20px 60px 20px;
+    text-align: center;
+}
+
+.text-content-container .cmContent p {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-family: var(--font-titlu);
+    line-height: 1;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.text-content-container .cmContent {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.text-content-container .cmContent h1 {
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.cmFooter-Element {
+    position: relative;
+    background: #000;
+    padding: 70px 20px 60px 20px;
+}
+
+.cmFooter-Element .footer-text > .cmContent {
+    position: relative;
+    display: block;
+    color: #ccc;
+    text-align: center;
+    font-family: var(--font-titlu);
+    line-height: 1;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.cmFooter-Element .footer-links .nav-level1 {
+    padding-left: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.cmFooter-Element .footer-links .nav-level1 li {
+    list-style-type: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cmFooter-Element .footer-links .nav-level1 li a {
+    position: relative;
+    display: inline-block;
+    color: #888;
+    font-family: var(--font-secundar);
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.cmFooter-Element .footer-links .nav-level1 li a:hover , .cmFooter-Element .footer-links .nav-level1 li a:focus-visible {
+    text-decoration: underline;
+    color: #ff5252;
+}
+
+@media (min-width: 1100px) {
+
+    .testimonials-panel .wrapperContainer {
+        max-width: 1220px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0 auto;
+    }
+
+    .testimonials-panel .wrapperContainer .cmElement.cmContent {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    #root .wrapper-pop-up .pop-up-element {
+        width: 1100px;
+        padding: 80px;
+        background-color: #2c2c2c;
+    }
+
+    .testimonial-panel .wrapperContainer .testimonial-box {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .testimonials-panel .my-nav-container {
+        padding-top: 60px;
+    }
+
+    .testimonials-panel > header .cmElementTitle h2 {
+        margin-bottom: 60px;
+    }
+
+}

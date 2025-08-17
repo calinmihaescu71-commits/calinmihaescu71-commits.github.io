@@ -1,0 +1,154 @@
+.survey-choose {
+    position: relative;
+    background-color: #1e1e1e;
+    padding: 4rem 0;
+}
+
+.survey-choose > header .cmElementTitle {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-family: var(--font-tertiar);
+    color: #fff;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.survey-choose .cmContents .content-elemnt {
+    position: relative;
+    background: #2a2a2a;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    padding-top: 90px;
+    transition: all 0.5s ease;
+}
+
+.survey-choose .cmContents .content-elemnt::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url("../ImagesFonts/moneysign.png");
+    background-size: contain;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+.survey-choose .cmContents .content-elemnt:hover , .survey-choose .cmContents .content-elemnt:focus-within {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4)
+}
+
+.survey-choose .cmContents .content-details:nth-child(2) .content-elemnt:before {
+    background-image: url("../ImagesFonts/clockicon.png");
+}
+
+.survey-choose .cmContents .content-details:nth-child(3) .content-elemnt:before {
+    background-image: url("../ImagesFonts/succes.png");
+}
+
+
+.survey-choose .cmContents .content-elemnt > header .cmElementTitle {
+    position: relative;
+    color: #fff;
+    font-family: var(--font-tertiar);
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+}
+
+.survey-choose .cmContents .content-elemnt .content {
+    position: relative;
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-titlu);
+}
+
+@media (min-width: 800px) {
+
+   .survey-choose .cmContents {
+        display: flex;
+        margin-left: 15px;
+        margin-right: 15px;
+   } 
+
+   .survey-choose .cmContents .content-elemnt {
+     margin-left: 10px;
+     margin-right: 10px;
+   }
+
+}
+
+@media (min-width: 800px) {
+
+
+}
+
+@media (min-width: 1100px) {
+
+    .survey-choose {
+        padding-top: 100px;
+    }
+
+    .survey-choose .cmContents {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .survey-choose > header {
+        transition: all 0.5s ease;
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    .survey-choose .cmContents .content-details {
+        width: 33.33%;
+    }
+
+    .survey-choose .cmContents .content-details {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease;
+        transform: translateY(20px);
+    }
+
+    .survey-choose.active > header {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .survey-choose.active .cmContents .content-details:first-child {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.5s;
+        visibility: visible;
+    }
+
+    .survey-choose.active .cmContents .content-details:nth-child(2) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 1s;
+        visibility: visible;
+    }
+
+    .survey-choose.active .cmContents .content-details:nth-child(3) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 1.5s;
+        visibility: visible;
+    }
+
+}
+
