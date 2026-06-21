@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-42CFYQGBKM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-42CFYQGBKM');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SurveyFuncy - Share Your Opinion & Get Paid Instantly</title>
@@ -290,11 +300,31 @@
 
         /* Footer */
         footer {
-            padding: 30px 0;
+            padding: 40px 0;
             text-align: center;
             font-size: 14px;
             color: #9ca3af;
             border-top: 1px solid #eaeaea;
+            background-color: #ffffff;
+        }
+
+        .footer-links {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #6b7280;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #0d693f;
+            text-decoration: underline;
         }
 
         /* Responsive */
@@ -406,13 +436,18 @@
 
     <footer>
         <div class="container">
-            &copy; 2026 surveyfuncy.com — All rights reserved.
+            <div>&copy; 2026 surveyfuncy.com — All rights reserved.</div>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html#ccpa">Do Not Sell My Personal Information</a>
+            </div>
         </div>
     </footer>
 
     <script>
         // MODIFICA LINKUL DE MAI JOS: Pune aici linkul tau de CPA
-        const myCpaLink = "https://afflat3e1.com/trk/lnk/5B059447-8154-45CC-BD60-17B3BCE9A596/?o=30409&c=918277&a=644368&k=30DD7E84999E4FBF9A217778F30C3929&l=34952";
+        const myCpaLink = "https://afflat3e3.com/trk/lnk/5B059447-8154-45CC-BD60-17B3BCE9A596/?o=30409&c=918277&a=644368&k=30DD7E84999E4FBF9A217778F30C3929&l=34952";
 
         // Aplica automat linkul de mai sus la toate butoanele cu clasa .cpa-link
         document.querySelectorAll('.cpa-link').forEach(button => {
